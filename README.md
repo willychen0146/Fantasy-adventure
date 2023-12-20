@@ -5,6 +5,8 @@ A Text-based adventure game project.
 
 Welcome! brave warrior, to the world full of magic and  mystery, and your choices will shape the fate of the world. In "Fantasy Adventure, you are about to embark on an endless journey of exploration and exciting adventures.
 
+![demo_screenshot_group27](https://github.com/willychen0146/fantasy-adventure/assets/43375835/e2f89a24-fb1b-49e1-ada7-241abb39c769)
+
 ## Usage
 ### Requirement
 Type the following command in your terminal. 
