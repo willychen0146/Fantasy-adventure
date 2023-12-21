@@ -60,6 +60,7 @@ void windows_event(sf::RenderWindow& window, sf::Event& event) {
             break;
         } else if (event.type == sf::Event::Closed) {
             window.close();
+            exit(0);
         }
     }
 }
