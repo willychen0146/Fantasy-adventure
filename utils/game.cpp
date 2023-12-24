@@ -169,7 +169,6 @@ bool Game::story_teller(std::ifstream& storyTxt, sf::RenderWindow& window, sf::T
                         pos += 30;
                         window.draw(textOb);
                     }
-                    window.display();
                     
                     // 玩家進行選擇
                     string temp = "請輸入選項: ";
