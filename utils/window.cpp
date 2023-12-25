@@ -23,7 +23,7 @@ FallingText::FallingText(const std::wstring& text, const sf::Font& font, unsigne
 
     // Initialize the position at the center of the window
     float xPosition = (windowWidth - textObject.getGlobalBounds().width) / 2.0f;
-    textObject.setPosition(xPosition, -100);
+    textObject.setPosition(xPosition, 1180);
 }
 
 void FallingText::update(float deltaTime){
@@ -32,7 +32,7 @@ void FallingText::update(float deltaTime){
         return;
     }
     sf::Vector2f position = textObject.getPosition();
-    position.y += fallSpeed * deltaTime;
+    position.y -= fallSpeed * deltaTime;
     textObject.setPosition(position);
 }
 
@@ -127,7 +127,7 @@ void final_ending(sf::RenderWindow& window, sf::Text& textOb, std::ifstream& inp
 
     // Load falling image texture
     sf::Sprite fallingImage(pdogs);
-    fallingImage.setPosition(((windowX / 2.0f) - 500.0f), -200.0f);  // Set initial position above the window
+    fallingImage.setPosition(((windowX / 2.0f) - 500.0f), 1130.0f);  // Set initial position above the window
 
     while (window.isOpen())
     {
@@ -144,7 +144,7 @@ void final_ending(sf::RenderWindow& window, sf::Text& textOb, std::ifstream& inp
         sf::Sprite sprite(texture);
         window.draw(sprite);
         // Draw the falling image
-        fallingImage.move(0.0f, fallSpeed * deltaTime);
+        fallingImage.move(0.0f, -fallSpeed * deltaTime);
         window.draw(fallingImage);
 
         bool allTextOffScreen = true;  // Flag to check if all text is off the screen
@@ -154,7 +154,7 @@ void final_ending(sf::RenderWindow& window, sf::Text& textOb, std::ifstream& inp
             fallingText.update(deltaTime);
             fallingText.draw(window);
             // Check if any text is still on the screen
-            if (fallingText.getYPosition() < 1080.0)
+            if (fallingText.getYPosition() > -100.0)
             {
                 allTextOffScreen = false;
             }
