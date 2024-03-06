@@ -110,3 +110,11 @@ make
 # Execute the executable file based on you system (.exe,.out, etc.).
 ./{executable_file_name}
 ```
+
+## Authors
+
+- [@NoMercySusie](https://github.com/willychen0146)
+
+## LICENSE
+
+The project is made available under the MIT license. See the LICENSE file for more information.
